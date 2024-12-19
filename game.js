@@ -10,6 +10,7 @@ $(".btn").on("click", function() {
     userClickedPattern.push(userChosenColor);
 
     //console.log(userClickedPattern);
+    playSound(userChosenColor);
 });
 
 function nextSequence() {
@@ -25,8 +26,10 @@ function nextSequence() {
   
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
+}
+
+function playSound(name) {
     const audio = new Audio("sounds/" + randomChosenColor + ".mp3");
     audio.play();
 }
-
 
