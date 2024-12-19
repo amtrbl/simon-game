@@ -9,8 +9,8 @@ $(".btn").on("click", function() {
 
     userClickedPattern.push(userChosenColor);
 
-    //console.log(userClickedPattern);
     playSound(userChosenColor);
+    animatePress(userChosenColor);
 });
 
 function nextSequence() {
@@ -29,7 +29,13 @@ function nextSequence() {
 }
 
 function playSound(name) {
-    const audio = new Audio("sounds/" + randomChosenColor + ".mp3");
+    const audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
 }
 
+function animatePress(currentColor) {
+    $("#" + currentColor).addClass("pressed");
+    setTimeout(function () {
+        $("#" + currentColor).removeClass("pressed");
+    }, 100);
+}
