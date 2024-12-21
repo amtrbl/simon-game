@@ -16,6 +16,29 @@ $(document).keydown(function() {
     }
 });
 
+// Event listener for keypresses (Q, W, A, S)
+$(document).keydown(function(event) {
+    const keyPressed = event.key.toLowerCase(); 
+
+    if (keyPressed === "q" || keyPressed === "w" || keyPressed === "a" || keyPressed === "s") {
+        const keyColorMap = {
+            "q": "green",  
+            "w": "red",   
+            "a": "yellow", 
+            "s": "blue"    
+        };
+
+        const userChosenColor = keyColorMap[keyPressed];
+        userClickedPattern.push(userChosenColor);
+
+        playSound(userChosenColor);
+        animatePress(userChosenColor);
+        
+        // Call checkAnswer after user presses the key, passing in the index of the last answer in the user's sequence
+        checkAnswer(userClickedPattern.length - 1);
+    }
+});
+
 $(".btn").on("click", function() {
     const userChosenColor = $(this).attr("id");
 
