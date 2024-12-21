@@ -11,9 +11,13 @@ You can play the game directly in your browser here:
 
 2. **Follow the sequence**:  
    The game will show a sequence of colored buttons in a random order. You must repeat the sequence by pressing the corresponding buttons.
-
-3. **New color added each time**:  
+3. **Use the mouse or keyboard**:
+   - **Q** for **Green**
+   - **W** for **Red**
+   - **A** for **Yellow**
+   - **S** for **Blue**
+5. **New color added each time**:  
    Each time you correctly replicate the sequence, a new color will be added to the sequence, making it longer and more challenging.
 
-4. **If you make a mistake**:  
+6. **If you make a mistake**:  
    If you get the sequence wrong, the game will end, and a "Game Over" message will appear. To restart the game, simply **press any key again**.
